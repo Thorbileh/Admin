@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  width: 350px;
+  height: 650px;
+  background-color: var(--green-buttons-links);
+  color: var(--white-background);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px; /* Add border-radius to match the design */
+}
+
+.sidebar img {
+  max-width: 250px;
+}
+
+.sidebar p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  padding: 30px;
+  width: 100%;
+  max-width: 579px;
+  border-radius: 10px;
+  padding-bottom: 50px;
+}
+
+.card h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 15px;
+  margin: 0.5rem;
+  color: var(--black-text);
+}
+
+.form-control {
+  border: 1px solid var(--green-buttons-links);
+  border-radius: 14px;
+  padding: 8px;
+  font-size: 14px;
+  height: 52px;
+}
+
+.btn-primary {
+  background-color: var(--green-buttons-links);
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  color: var(--white-background);
+  transition: background-color 0.3s ease;
+  width: 100%;
+  height: 52px;
+  margin-top: 50px;
+}
+
+.btn-primary:hover {
+  background-color: #304a4c;
+  cursor: pointer;
+}

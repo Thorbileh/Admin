@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --green-buttons-links: #3c5a5d;
+  --white-background: #f6f6f6;
+  --black-text: #0c1415;
+  --secondary-background: #707f81;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: var(--white-background);
+  color: var(--black-text);
+}
