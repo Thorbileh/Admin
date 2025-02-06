@@ -36,20 +36,21 @@
   margin-bottom: 20px;
 }
 
-.tab-button {
+.tabs button {
   padding: 10px 20px;
   background-color: #3C5A5D;
   color: white;
   border: none;
   cursor: pointer;
   margin-right: 10px;
+  border-radius: 4px 4px 0 0;
 }
 
-.tab-button.active {
+.tabs button.active {
   background-color: #0C1415;
 }
 
-.transaction-type {
+.transaction-section {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
@@ -95,5 +96,6 @@ th {
 .pagination span {
   margin: 0 5px;
 }
+
 
   

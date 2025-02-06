@@ -2,15 +2,21 @@
   <div class="header">
     <h1>Transactions</h1>
     <div class="search-filter">
-      <input type="text" placeholder="Search" [(ngModel)]="searchQuery">
-      <button (click)="filterTransactions()">Filter</button>
+      <input type="text" placeholder="Search" />
+      <button>Filter</button>
     </div>
   </div>
+
   <div class="transaction-section">
     <div class="tabs">
-      <button class="tab-button" [class.active]="activeTab === 'open'" (click)="activeTab = 'open'">Open Transaction</button>
-      <button class="tab-button" [class.active]="activeTab === 'closed'" (click)="activeTab = 'closed'">Closed Transaction</button>
+      <button class="tab" [class.active]="activeTab === 'open'" (click)="activeTab = 'open'">
+        Open Transaction
+      </button>
+      <button class="tab" [class.active]="activeTab === 'closed'" (click)="activeTab = 'closed'">
+        Closed Transaction
+      </button>
     </div>
+
     <div *ngIf="activeTab === 'open'" class="transaction-type">
       <h2>Open Transaction</h2>
       <table>
@@ -19,8 +25,8 @@
             <th>Runner</th>
             <th>Order Number</th>
             <th>Total Amount</th>
-            <th>Date</th>
             <th>Status</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -28,12 +34,13 @@
             <td>{{ transaction.runner }}</td>
             <td>{{ transaction.orderNumber }}</td>
             <td>{{ transaction.totalAmount }}</td>
-            <td>{{ transaction.date }}</td>
             <td>{{ transaction.status }}</td>
+            <td><button>Pay</button></td>
           </tr>
         </tbody>
       </table>
     </div>
+
     <div *ngIf="activeTab === 'closed'" class="transaction-type">
       <h2>Closed Transaction</h2>
       <table>
@@ -42,8 +49,8 @@
             <th>Runner</th>
             <th>Order Number</th>
             <th>Total Amount</th>
-            <th>Date</th>
             <th>Status</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -51,18 +58,17 @@
             <td>{{ transaction.runner }}</td>
             <td>{{ transaction.orderNumber }}</td>
             <td>{{ transaction.totalAmount }}</td>
-            <td>{{ transaction.date }}</td>
             <td>{{ transaction.status }}</td>
+            <td><button>View</button></td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
+
   <div class="pagination">
-    <button (click)="previousPage()">Previous</button>
-    <span>{{ currentPage }}</span>
-    <button (click)="nextPage()">Next</button>
+    <button>Previous</button>
+    <span>1</span>
+    <button>Next</button>
   </div>
 </div>
-
-
