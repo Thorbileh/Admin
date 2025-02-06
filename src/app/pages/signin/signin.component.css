@@ -19,7 +19,8 @@
 }
 
 .sidebar img {
-  max-width: 250px;
+  max-width: 350px;
+  margin-bottom: 110px;
 }
 
 .sidebar p {
@@ -42,6 +43,7 @@
   max-width: 579px;
   border-radius: 10px;
   padding-bottom: 50px;
+  border: none !important;
 }
 
 .card h2 {

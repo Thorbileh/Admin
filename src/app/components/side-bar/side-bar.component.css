@@ -1,51 +1,110 @@
-.sidebar {
-  width: 250px;
+.container {
+  display: flex;
   height: 100vh;
-  background-color: #3C5A5D;
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  width: 350px;
+  height: 650px;
+  background-color: var(--green-buttons-links);
+  color: var(--white-background);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px; /* Add border-radius to match the design */
+  margin: 40px 50px; /* Add margin-top, margin-bottom, and margin-right */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar img {
+  max-width: 150px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+  color: var(--white-background);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebar nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
-.logo img {
-  width: 50px;
-  height: 50px;
+.card {
+  padding: 30px;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 10px;
+  padding-bottom: 50px;
+  background-color: var(--white-background);
 }
 
-.logo h2 {
-  margin: 0;
-  font-size: 1.5rem;
+.card h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
 }
 
-.nav-item {
-  margin: 15px 0;
+.transaction-table {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.nav-link {
-  color: #f6f6f6;
-  display: flex;
-  align-items: center;
+.transaction-table h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.nav-link:hover, .nav-link:focus {
-  background-color: #0C1415;
+.transaction-table table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.collapse {
-  background-color: #0C1415;
+.transaction-table table th,
+.transaction-table table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
 }
 
-.collapse ul {
-  padding-left: 20px;
+.transaction-table table th {
+  background-color: #f6f6f6;
 }
 
-.collapse ul li a {
-  color: #f6f6f6;
-  text-decoration: none;
+.btn-primary {
+  background-color: var(--green-buttons-links);
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  color: var(--white-background);
+  transition: background-color 0.3s ease;
+  width: 100px;
+  height: 40px;
+  margin-top: 5px;
+  cursor: pointer;
 }
 
-.collapse ul li a:hover {
-  text-decoration: underline;
+.btn-primary:hover {
+  background-color: #304a4c;
 }
