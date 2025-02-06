@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    color: #3C5A5D;
+  }
+  
+  .search-filter {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-filter input {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .search-filter button {
+    padding: 5px 10px;
+    background-color: #3C5A5D;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .transaction-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transaction-type {
+    margin-bottom: 20px;
+  }
+  
+  .transaction-type.open {
+    background-color: #3C5A5D;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .transaction-type.closed {
+    background-color: #3C5A5D;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #3C5A5D;
+    color: white;
+  }
+  
+  button {
+    background-color: #0C1415;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #3C5A5D;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    padding: 5px 10px;
+    background-color: #3C5A5D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .pagination span {
+    margin: 0 5px;
+  }
+  
