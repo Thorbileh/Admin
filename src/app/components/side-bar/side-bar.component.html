@@ -1,42 +1,75 @@
 <div class="sidebar">
-    <div class="logo">
-      <img src="path-to-your-logo.png" alt="Logo">
-      <h2>EasyErrands</h2>
-    </div>
-    <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" aria-controls="dashboardSubmenu">
-          <i class="fas fa-tachometer-alt"></i>
-          Dashboard
-        </a>
-        <ul class="collapse list-unstyled" id="dashboardSubmenu">
-          <li>
-            <a class="nav-link pl-4" href="#">Open Transaction</a>
-          </li>
-          <li>
-            <a class="nav-link pl-4" href="#">Closed Transaction</a>
-          </li>
-          <li>
-            <a class="nav-link pl-4" href="#">Orders History</a>
-          </li>
-          <li>
-            <a class="nav-link pl-4" href="#">Complaints</a>
-          </li>
-          <li>
-            <a class="nav-link pl-4" href="#">Total Earnings</a>
-          </li>
-          <li>
-            <a class="nav-link pl-4" href="#" data-toggle="collapse" aria-expanded="false" aria-controls="runnersSubmenu">
-              Runners
-            </a>
-            <ul class="collapse list-unstyled" id="runnersSubmenu">
-              <li><a class="nav-link pl-5" href="#">Pending Runner</a></li>
-              <li><a class="nav-link pl-5" href="#">Approved Runner</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
+  <div class="logo">
+    <img src="path-to-your-logo.png" alt="Logo">
+    <h2>EasyErrands</h2>
   </div>
-  
-  
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" aria-controls="dashboard">
+        <i class="fas fa-tachometer-alt"></i>
+        Dashboard
+      </a>
+      <div class="collapse" id="dashboard">
+        <!-- Dashboard content -->
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" aria-controls="transaction">
+        <i class="fas fa-exchange-alt"></i>
+        Transaction
+      </a>
+      <div class="collapse" id="transaction">
+        <ul class="list-unstyled">
+          <li><a href="#">Open Transaction</a></li>
+          <li><a href="#">Closed Transaction</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" aria-controls="orders">
+        <i class="fas fa-shopping-cart"></i>
+        Orders
+      </a>
+      <div class="collapse" id="orders">
+        <ul class="list-unstyled">
+          <li><a href="#">Orders History</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" aria-controls="complaints">
+        <i class="fas fa-exclamation-circle"></i>
+        Complaints
+      </a>
+      <div class="collapse" id="complaints">
+        <ul class="list-unstyled">
+          <li><a href="#">Complaints</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" aria-controls="earnings">
+        <i class="fas fa-coins"></i>
+        Total Earnings
+      </a>
+      <div class="collapse" id="earnings">
+        <ul class="list-unstyled">
+          <li><a href="#">Total Earnings</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" aria-controls="runners">
+        <i class="fas fa-running"></i>
+        Runners
+      </a>
+      <div class="collapse" id="runners">
+        <ul class="list-unstyled">
+          <li><a href="#">Pending Runner</a></li>
+          <li><a href="#">Approved Runner</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
+
