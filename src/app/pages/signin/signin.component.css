@@ -56,7 +56,6 @@
 }
 
 .form-control {
-  border: 1px solid var(--green-buttons-links);
   border-radius: 14px;
   padding: 8px;
   font-size: 14px;
