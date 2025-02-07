@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { TransactionsComponent } from './page/transactions/transactions.component';
+import { TransactionsComponent } from './pages/transactions/transactions.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { PayRunnerComponent } from './pages/pay-runner/pay-runner.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
