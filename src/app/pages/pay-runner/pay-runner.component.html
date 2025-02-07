@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+        <app-side-bar></app-side-bar>
+    </div>
+    <div class="col-md-8 content-area">
+        <div class="profile-card">
+            <div class="profile-content">
+                <div class="details">
+                    <h4>Personal Details</h4>
+                    <p><strong>Full Name:</strong> <span class="holders">{{ user.fullName }}</span></p>
+                    <p><strong>Email:</strong> <span class="holders">{{ user.email }}</span></p>
+                    <p><strong>Address:</strong> <span class="holders">{{ user.address }}</span></p>
+                    <h4>Account Details</h4>
+                    <p><strong>Card Holder Name:</strong> <span class="holders">{{ user.cardHolder }}</span></p>
+                    <p><strong>Account Number:</strong> <span class="holders">{{ user.accountNumber }}</span></p>
+                    <p><strong>Bank Name:</strong> <span class="holders">{{ user.bankName }}</span></p>
+                    <p><strong>Total Amount:</strong> <span class="holders">{{ user.totalAmount }}</span></p>
+                    <div class="button-group">
+                        <button class="btn btn-custom">Pay</button>
+                        <button class="btn btn-secondary">Cancel</button>
+                    </div>
+                </div>
+                <img [src]="user.profile" alt="User Picture" class="profile-img" />
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
