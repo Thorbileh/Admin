@@ -4,7 +4,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 export const routes: Routes = [
     {path:'signin-page', component:SigninComponent},
+    {path: 'side', component:SideBarComponent},
     {path: '', redirectTo: 'signin-page', pathMatch: 'full'},
     {path: '**', redirectTo: 'signin-page', pathMatch: 'full'},
-    {path: 'side', component:SideBarComponent},
 ];

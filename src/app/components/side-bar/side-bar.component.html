@@ -1,6 +1,7 @@
 <div class="container">
   <div class="sidebar">
-    <img src="assets/logo.png" alt="EasyErrands" class="img-fluid">
+    <img src="logo.png" alt="EasyErrands" class="img-fluid" [routerLink]="['/dashboard']"
+      routerLinkActive="router-link-active">
     <nav>
       <ul>
         <li><a href="/dashboard">Dashboard</a></li>
@@ -11,58 +12,5 @@
         <li><a href="/runners">Runners</a></li>
       </ul>
     </nav>
-  </div>
-  <div class="content">
-    <div class="card">
-      <h2 class="card-title text-center">Transactions</h2>
-      <div class="transaction-table">
-        <h3>Open Transaction</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Runner</th>
-              <th>Order Number</th>
-              <th>Total Amount</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>John Doe</td>
-              <td>ASFB1HB1J0LKV</td>
-              <td>R 900.00</td>
-              <td>Delivered</td>
-              <td><button class="btn btn-primary">Pay</button></td>
-            </tr>
-            <tr>
-              <td>John Doe</td>
-              <td>ASFB1H45J0LKV</td>
-              <td>R 379.00</td>
-              <td>Delivered</td>
-              <td><button class="btn btn-primary">Pay</button></td>
-            </tr>
-            <tr>
-              <td>Sihle Ntshali</td>
-              <td>ASFB1H45J0LKV</td>
-              <td>R 200.00</td>
-              <td>In Progress</td>
-              <td><button class="btn btn-primary">Pay</button></td>
-            </tr>
-            <tr>
-              <td>Thando Lukhele</td>
-              <td>ASFB1H45J0LKV</td>
-              <td>R 379.00</td>
-              <td>Shipping</td>
-              <td><button class="btn btn-primary">Pay</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="transaction-table">
-        <h3>Closed Transaction</h3>
-        <!-- Add similar table for closed transactions if needed -->
-      </div>
-    </div>
   </div>
 </div>
