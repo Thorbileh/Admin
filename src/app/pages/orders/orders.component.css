@@ -6,7 +6,7 @@ app-side-bar {
   left: 0;
   top: 0;
 }
-.transactions-container {
+.orders-container {
   width: 65%;
   padding: 20px;
   font-family: Arial, sans-serif;

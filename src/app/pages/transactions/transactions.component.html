@@ -2,21 +2,17 @@
   <!-- Search & Filter Section -->
   <div class="search-filter">
     <h2>Transactions</h2>
-  
+
   </div>
- 
-<app-side-bar></app-side-bar>
+
+  <app-side-bar></app-side-bar>
 
   <!-- Tabs -->
   <div class="tabs">
-    <button 
-      (click)="switchTab('open')" 
-      [ngClass]="{ 'active-tab': selectedTab === 'open' }">
+    <button (click)="switchTab('open')" [ngClass]="{ 'active-tab': selectedTab === 'open' }">
       Open Transactions
     </button>
-    <button 
-      (click)="switchTab('closed')" 
-      [ngClass]="{ 'active-tab': selectedTab === 'closed' }">
+    <button (click)="switchTab('closed')" [ngClass]="{ 'active-tab': selectedTab === 'closed' }">
       Closed Transactions
     </button>
   </div>
@@ -44,15 +40,13 @@
         <td>{{ transaction.amount | currency:'R':'symbol':'1.2-2' }}</td>
         <td>{{ transaction.status }}</td>
         <td>
-          <button 
-          [ngClass]="{
+          <button [ngClass]="{
             'pay-btn-active': transaction.status === 'Delivered',
             'pay-btn-disabled': transaction.status !== 'Delivered'
-          }"
-          [routerLink]="transaction.status === 'Delivered' ? '/pay-runner' : null"
-          [attr.disabled]="transaction.status !== 'Delivered' ? true : null">
-          Pay
-        </button>
+          }" [routerLink]="transaction.status === 'Delivered' ? '/pay-runner' : null"
+            [attr.disabled]="transaction.status !== 'Delivered' ? true : null">
+            Pay
+          </button>
         </td>
       </tr>
     </tbody>
@@ -78,11 +72,10 @@
           </div>
         </td>
         <td>{{ transaction.orderNumber }}</td>
-        <td>{{ transaction.amount | currency:'R':'symbol':'1.2-2' }}</td>
+        <td>R {{ transaction.amount }}</td>
         <td>{{ transaction.date }}</td>
         <td>{{ transaction.status }}</td>
       </tr>
     </tbody>
   </table>
- 
 </div>
