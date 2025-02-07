@@ -7,5 +7,6 @@ export const routes: Routes = [
     {path:'signin-page', component:SigninComponent},
     {path: 'side', component:SideBarComponent},
     {path: '', redirectTo: 'signin-page', pathMatch: 'full'},
-    {path: '**', redirectTo: 'signin-page', pathMatch: 'full'},
+   
+    {path:'transaction',component:TransactionsComponent}
 ];
