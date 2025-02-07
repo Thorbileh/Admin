@@ -1,0 +1,36 @@
+.dashboard-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.dashboard-card {
+  background-color: var(--secondary-background);
+  color: var(--white-background);
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(33.333% - 20px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.card-body {
+  font-size: 16px;
+}
