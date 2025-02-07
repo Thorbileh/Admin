@@ -64,10 +64,6 @@ app-side-bar {
   font-weight: bold;
 }
 
-.tabs button:not(.active-tab) {
-  background-color: #f6f6f6;
-}
-
 /* Table Styling */
 table {
   width: 100%;
