@@ -1,0 +1,111 @@
+app-side-bar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.transactions-container {
+  width: 65%;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-left: 170px;
+  margin-top: 70px;
+}
+
+.search-filter h2 {
+  font-size: 20px;
+  color: #0c1415;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-left: 250px;
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-left: 250px;
+  padding-top: 20px;
+}
+
+.tabs button {
+  width: 50%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #707f81;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tabs button.active-tab {
+  border-bottom-color: #3c5a5d;
+  color: #3c5a5d;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-left: 250px;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #0c1415;
+  padding: 8px 10px;
+}
+
+th {
+  background: #3c5a5d;
+  color: #f6f6f6;
+  padding: 10px 12px;
+}
+
+td {
+  font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the left */
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  background-color: #f6f6f6;
+  color: #3c5a5d;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  background-color: #ddd;
+}
+
+.pagination button.active-page {
+  background-color: #3c5a5d;
+  color: #f6f6f6;
+  font-weight: bold;
+}
+
+a {
+  color: #707F81; 
+  text-decoration: none; 
+}
+
+a:hover {
+  text-decoration: underline; 
+}
