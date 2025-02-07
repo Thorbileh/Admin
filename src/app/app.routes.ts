@@ -4,6 +4,7 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { PayRunnerComponent } from './pages/pay-runner/pay-runner.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { RunnersComponent } from './pages/runners/runners.component';
+import { ViewRunnerComponent } from './pages/view-runner/view-runner.component';
 
 export const routes: Routes = [
     {path:'signin-page', component:SigninComponent},
@@ -11,6 +12,7 @@ export const routes: Routes = [
     {path: '', redirectTo: 'signin-page', pathMatch: 'full'}, 
     {path:'transaction',component:TransactionsComponent},
     {path:'pay-runner',component:PayRunnerComponent},
-    {path:'runner',component:RunnersComponent}
+    {path:'runner',component:RunnersComponent},
+    {path:'view-runner',component:ViewRunnerComponent},
 
 ];
