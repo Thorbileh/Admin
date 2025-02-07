@@ -6,12 +6,35 @@ app-side-bar {
   left: 0;
   top: 0;
 }
-.transactions-container {
-  margin-top: 70px;
-  width: 69%;
+.orders-container {
+  width: 65%;
   padding: 20px;
   font-family: Arial, sans-serif;
   margin-left: 170px;
+  margin-top: 70px;
+}
+
+/* Search & Filter */
+
+.search-filter h2 {
+  font-size: 20px;
+  color: #0c1415;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-left: 250px;
+}
+
+.search-filter-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-filter-box input,
+.search-filter-box select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 /* Tabs */
