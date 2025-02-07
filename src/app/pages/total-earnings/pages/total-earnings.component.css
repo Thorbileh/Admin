@@ -10,11 +10,12 @@ app-side-bar {
   padding: 20px;
   font-family: Arial, sans-serif;
   margin-left: 170px;
+  margin-top: 70px;
 }
 
 .search-filter h2 {
   font-size: 20px;
-  color: #0C1415;
+  color: #0c1415;
   font-weight: bold;
   margin-top: 100px;
   margin-left: 250px;
@@ -46,9 +47,6 @@ app-side-bar {
   color: #3c5a5d;
   font-weight: bold;
 }
-.tabs button:not(.active-tab) {
-  background-color: #f6f6f6;
-}
 
 table {
   width: 100%;
@@ -73,4 +71,41 @@ th {
 
 td {
   font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the left */
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  background-color: #f6f6f6;
+  color: #3c5a5d;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  background-color: #ddd;
+}
+
+.pagination button.active-page {
+  background-color: #3c5a5d;
+  color: #f6f6f6;
+  font-weight: bold;
+}
+
+a {
+  color: #707F81; 
+  text-decoration: none; 
+}
+
+a:hover {
+  text-decoration: underline; 
 }
