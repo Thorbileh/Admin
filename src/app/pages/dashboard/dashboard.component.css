@@ -22,6 +22,10 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+.dashboard-card:hover {
+  background-color: var(--secondary-background);
+  width: calc(33.333% - 22px);
+}
 
 .card-header {
   display: flex;

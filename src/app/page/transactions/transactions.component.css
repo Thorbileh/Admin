@@ -1,0 +1,135 @@
+/* General Styling */
+app-side-bar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.transactions-container {
+  width: 69%;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-left: 170px;
+}
+
+/* Search & Filter */
+.search-filter {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 69%;
+  margin-left: 250px;
+}
+
+.search-filter h2 {
+  font-size: 20px;
+  color: #0c1415;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.search-filter-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-filter-box input,
+.search-filter-box select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-left: 250px;
+  padding-top: 20px;
+}
+
+.tabs button {
+  width: 50%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #707f81;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tabs button.active-tab {
+  border-bottom-color: #3c5a5d;
+  color: #3c5a5d;
+  font-weight: bold;
+}
+
+.tabs button:not(.active-tab) {
+  background-color: #f6f6f6;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-left: 250px;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #0c1415;
+  padding: 8px 10px;
+}
+td {
+  font-size: small;
+}
+
+/* Table Header Styling */
+th {
+  background: #3c5a5d;
+  color: #f6f6f6;
+  padding: 10px 12px;
+}
+
+/* Runner Info */
+.runner-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.runner-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #ddd;
+}
+
+/* Pay Button Styling */
+.pay-btn-active {
+  background: #3c5a5d;
+  color: #f6f6f6;
+  width: 50%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pay-btn-disabled {
+  background: #f6f6f6;
+  color: #3c5a5d;
+  width: 50%;
+  border: none;
+  border-radius: 6px;
+  cursor: not-allowed;
+}

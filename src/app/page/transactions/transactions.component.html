@@ -1,0 +1,78 @@
+<div class="transactions-container">
+  <!-- Search & Filter Section -->
+  <div class="search-filter">
+    <h2>Transactions</h2>
+  </div>
+
+  <app-side-bar></app-side-bar>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button (click)="switchTab('open')" [ngClass]="{ 'active-tab': selectedTab === 'open' }">
+      Open Transactions
+    </button>
+    <button (click)="switchTab('closed')" [ngClass]="{ 'active-tab': selectedTab === 'closed' }">
+      Closed Transactions
+    </button>
+  </div>
+
+  <!-- Open Transactions Table -->
+  <table *ngIf="selectedTab === 'open'">
+    <thead>
+      <tr>
+        <th>Runner</th>
+        <th>Order Number</th>
+        <th>Total Amount</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of openTransactions">
+        <td>
+          <div class="runner-info">
+            <img [src]="transaction.profile" alt="Runner" class="runner-img" />
+            {{ transaction.runner }}
+          </div>
+        </td>
+        <td>{{ transaction.orderNumber }}</td>
+        <td>{{ transaction.amount | currency:'R':true:'1.2-2' }}</td>
+        <td>{{ transaction.status }}</td>
+        <td>
+          <button
+            [ngClass]="{ 'pay-btn-active': transaction.status === 'Delivered', 'pay-btn-disabled': transaction.status !== 'Delivered' }">
+            Pay
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Closed Transactions Table -->
+  <table *ngIf="selectedTab === 'closed'">
+    <thead>
+      <tr>
+        <th>Runner</th>
+        <th>Order Number</th>
+        <th>Total Amount</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of closedTransactions">
+        <td>
+          <div class="runner-info">
+            <img [src]="transaction.profile" alt="Runner" class="runner-img" />
+            {{ transaction.runner }}
+          </div>
+        </td>
+        <td>{{ transaction.orderNumber }}</td>
+        <td>{{ transaction.amount | currency:'R':true:'1.2-2' }}</td>
+        <td>{{ transaction.date }}</td>
+        <td>{{ transaction.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
