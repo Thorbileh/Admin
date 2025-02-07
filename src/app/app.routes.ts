@@ -7,17 +7,23 @@ import { RunnersComponent } from './pages/runners/runners.component';
 import { ViewRunnerComponent } from './pages/view-runner/view-runner.component';
 import { TotalEarningsComponent } from './pages/total-earnings/pages/total-earnings.component';
 import { OrdersComponent } from './pages/orders/orders.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 
 
 export const routes: Routes = [
     {path:'signin-page', component:SigninComponent},
-    {path: 'dashboard', component:DashboardComponent},
-    {path:'transaction',component:TransactionsComponent},
-    {path:'view-runner',component:ViewRunnerComponent},
-    {path:'runners',component:RunnersComponent},
-    {path:'pay-runner',component:PayRunnerComponent},
-    { path: 'earnings', component: TotalEarningsComponent },
-    {path:'orders',component:OrdersComponent},
+    {path:'home',component:AdminLayoutComponent,
+        children:[
+            {path: 'dashboard', component:DashboardComponent},
+            {path:'transaction',component:TransactionsComponent},
+            {path:'view-runner',component:ViewRunnerComponent},
+            {path:'runners',component:RunnersComponent},
+            {path:'pay-runner',component:PayRunnerComponent},
+            { path: 'earnings', component: TotalEarningsComponent },
+            {path:'orders',component:OrdersComponent},
+        ]
+    },
+
     {path: '', redirectTo: 'signin-page', pathMatch: 'full'}, 
     {path: '**', redirectTo:'signin-page', pathMatch:'full'}
 

@@ -2,6 +2,8 @@
   display: flex;
   height: 100vh;
   align-items: flex-start;
+  width: 65%;
+  margin-left: 430px;
 }
 
 .dashboard-content {
@@ -11,6 +13,7 @@
   flex-wrap: wrap;
   gap: 30px;
   padding: 20px;
+ 
 }
 
 .dashboard-card {
