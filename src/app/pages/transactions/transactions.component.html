@@ -2,15 +2,7 @@
   <!-- Search & Filter Section -->
   <div class="search-filter">
     <h2>Transactions</h2>
-    <!-- <div class="search-filter-box">
-      <input [(ngModel)]="searchQuery" placeholder="Search Transactions" />
-      <select>
-        <option value="">Filter by Status</option>
-        <option value="Delivered">Delivered</option>
-        <option value="In Progress">In Progress</option>
-        <option value="Shipping">Shipping</option>
-      </select>
-    </div> -->
+  
   </div>
  
   <app-side-bar></app-side-bar>
@@ -53,9 +45,14 @@
         <td>{{ transaction.status }}</td>
         <td>
           <button 
-            [ngClass]="{ 'pay-btn-active': transaction.status === 'Delivered', 'pay-btn-disabled': transaction.status !== 'Delivered' }">
-            Pay
-          </button>
+          [ngClass]="{
+            'pay-btn-active': transaction.status === 'Delivered',
+            'pay-btn-disabled': transaction.status !== 'Delivered'
+          }"
+          [routerLink]="transaction.status === 'Delivered' ? '/pay-runner' : null"
+          [attr.disabled]="transaction.status !== 'Delivered' ? true : null">
+          Pay
+        </button>
         </td>
       </tr>
     </tbody>
