@@ -1,27 +1,46 @@
 <div class="dashboard-container">
     <app-side-bar></app-side-bar>
     <div class="dashboard-content">
-        <div class="dashboard-card">
+        <div class="dashboard-card" [routerLink]="['/open-transactions']" routerLinkActive="router-link-active">
             <div class="card-header">
                 <span class="card-title">7</span>
-                <img src="assets/icons/open-transaction.png" alt="Open Transaction" class="card-icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/37/FFFFFF/folder-invoices--v1.png"
+                    alt="folder-invoices--v1" />
             </div>
             <div class="card-body">
-                Open Transaction
+                Open Transactions
+            </div>
+        </div>
+        <div class="dashboard-card" [routerLink]="['/closed-transactions']" routerLinkActive="router-link-active">
+            <div class="card-header">
+                <span class="card-title">6</span>
+                <img src="assets/icons/closed-transaction.png" alt="Closed Transaction" class="card-icon">
+            </div>
+            <div class="card-body">
+                Closed Transactions
+            </div>
+        </div>
+        <div class="dashboard-card" [routerLink]="['/approved-runners']" routerLinkActive="router-link-active">
+            <div class="card-header">
+                <span class="card-title">7</span>
+                <img src="assets/icons/approved-runner.png" alt="Approved Runner" class="card-icon">
+            </div>
+            <div class="card-body">
+                Approved Runners
             </div>
         </div>
 
-        <div class="dashboard-card">
+        <div class="dashboard-card" [routerLink]="['/pending-runners']" routerLinkActive="router-link-active">
             <div class="card-header">
                 <span class="card-title">2</span>
                 <img src="assets/icons/pending-runner.png" alt="Pending Runner" class="card-icon">
             </div>
             <div class="card-body">
-                Pending Runner
+                Pending Runners
             </div>
         </div>
 
-        <div class="dashboard-card">
+        <div class="dashboard-card" [routerLink]="['/orders-history']" routerLinkActive="router-link-active">
             <div class="card-header">
                 <span class="card-title">5</span>
                 <img src="assets/icons/orders-history.png" alt="Orders History" class="card-icon">
@@ -30,28 +49,16 @@
                 Orders History
             </div>
         </div>
-
-        <div class="dashboard-card">
+        <div class="dashboard-card" [routerLink]="['/total-earnings']" routerLinkActive="router-link-active">
             <div class="card-header">
-                <span class="card-title">6</span>
-                <img src="assets/icons/closed-transaction.png" alt="Closed Transaction" class="card-icon">
+                <span class="card-title">14</span>
+                <img src="assets/icons/total-earnings.png" alt="Total Earnings" class="card-icon">
             </div>
             <div class="card-body">
-                Closed Transaction
+                Total Earnings
             </div>
         </div>
-
-        <div class="dashboard-card">
-            <div class="card-header">
-                <span class="card-title">7</span>
-                <img src="assets/icons/approved-runner.png" alt="Approved Runner" class="card-icon">
-            </div>
-            <div class="card-body">
-                Approved Runner
-            </div>
-        </div>
-
-        <div class="dashboard-card">
+        <div class="dashboard-card" [routerLink]="['/complaints']" routerLinkActive="router-link-active">
             <div class="card-header">
                 <span class="card-title">4</span>
                 <img src="assets/icons/complaints.png" alt="Complaints" class="card-icon">
@@ -61,14 +68,6 @@
             </div>
         </div>
 
-        <div class="dashboard-card">
-            <div class="card-header">
-                <span class="card-title">14</span>
-                <img src="assets/icons/total-earnings.png" alt="Total Earnings" class="card-icon">
-            </div>
-            <div class="card-body">
-                Total Earnings
-            </div>
-        </div>
+
     </div>
 </div>

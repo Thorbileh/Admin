@@ -5,20 +5,22 @@
 }
 
 .dashboard-content {
+  margin-top: 150px;
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   padding: 20px;
 }
 
 .dashboard-card {
-  background-color: var(--secondary-background);
+  background-color: var(--green-buttons-links);
   color: var(--white-background);
   border-radius: 10px;
   padding: 20px;
   width: calc(33.333% - 20px);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .card-header {
