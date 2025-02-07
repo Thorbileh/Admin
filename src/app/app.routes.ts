@@ -25,6 +25,5 @@ export const routes: Routes = [
     },
 
     {path: '', redirectTo: 'signin-page', pathMatch: 'full'}, 
-    {path: '**', redirectTo:'signin-page', pathMatch:'full'}
-
+    {path: '**', redirectTo:'signin-page', pathMatch:'full'}  
 ];
