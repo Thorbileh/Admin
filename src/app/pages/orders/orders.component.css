@@ -6,7 +6,7 @@ app-side-bar {
   left: 0;
   top: 0;
 }
-.transactions-container {
+.orders-container {
   width: 65%;
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -63,6 +63,10 @@ app-side-bar {
   border-bottom-color: #3c5a5d;
   color: #3c5a5d;
   font-weight: bold;
+}
+
+.tabs button:not(.active-tab) {
+  background-color: #f6f6f6;
 }
 
 /* Table Styling */
