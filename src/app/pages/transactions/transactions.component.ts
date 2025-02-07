@@ -1,13 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SideBarComponent } from "../../components/side-bar/side-bar.component"; 
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-transactions',
   standalone: true,
-  imports: [CommonModule, FormsModule, SideBarComponent,RouterLink],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './transactions.component.html',
   styleUrls: ['./transactions.component.css']
 })

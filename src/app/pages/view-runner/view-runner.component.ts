@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SideBarComponent } from "../../components/side-bar/side-bar.component";
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -7,7 +6,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-view-runner',
   standalone: true,
-  imports: [SideBarComponent,CommonModule, FormsModule,RouterLink],
+  imports: [CommonModule, FormsModule,RouterLink],
   templateUrl: './view-runner.component.html',
   styleUrl: './view-runner.component.css'
 })

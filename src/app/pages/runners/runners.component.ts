@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-runners',
   standalone: true,
-  imports: [CommonModule, FormsModule, SideBarComponent,RouterLink],
+  imports: [CommonModule, FormsModule,RouterLink],
   templateUrl: './runners.component.html',
   styleUrl: './runners.component.css'
 })

@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { SideBarComponent } from "../../components/side-bar/side-bar.component";
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-orders',
   standalone: true,
-  imports: [SideBarComponent, CommonModule],
+  imports: [CommonModule],
   templateUrl: './orders.component.html',
   styleUrl: './orders.component.css'
 })
