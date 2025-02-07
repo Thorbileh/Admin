@@ -1,0 +1,68 @@
+<div class="transactions-container">
+  <!-- Page Header -->
+  <div class="search-filter">
+    <h2>Total Earnings</h2>
+  </div>
+
+  <app-side-bar></app-side-bar>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button
+      (click)="switchTab('subscriptions')"
+      [ngClass]="{ 'active-tab': selectedTab === 'subscriptions' }"
+    >
+      Subscriptions
+    </button>
+    <button
+      (click)="switchTab('serviceFee')"
+      [ngClass]="{ 'active-tab': selectedTab === 'serviceFee' }"
+    >
+      Service Fee
+    </button>
+  </div>
+
+  <!-- Subscriptions Table -->
+  <table *ngIf="selectedTab === 'subscriptions'">
+    <thead>
+      <tr>
+        <th>Runner</th>
+        <th>Subscription Type</th>
+        <th>Proof of Payment</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sub of subscriptionsData">
+        <td>{{ sub.runner }}</td>
+        <td>{{ sub.type }}</td>
+        <td>
+          <a href="#">{{ sub.proof }}</a>
+        </td>
+        <td>{{ sub.amount | currency : "R" : "symbol" : "1.2-2" }}</td>
+        <td>{{ sub.date }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Service Fee Table -->
+  <table *ngIf="selectedTab === 'serviceFee'">
+    <thead>
+      <tr>
+        <th>Order Number</th>
+        <th>Total Amount</th>
+        <th>Service Fee</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let fee of serviceFeeData">
+        <td>{{ fee.orderNumber }}</td>
+        <td>{{ fee.amount | currency : "R" : "symbol" : "1.2-2" }}</td>
+        <td>{{ fee.fee | currency : "R" : "symbol" : "1.2-2" }}</td>
+        <td>{{ fee.date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

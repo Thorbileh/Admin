@@ -1,0 +1,76 @@
+app-side-bar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.transactions-container {
+  width: 65%;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-left: 170px;
+}
+
+.search-filter h2 {
+  font-size: 20px;
+  color: #0C1415;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-left: 250px;
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-left: 250px;
+  padding-top: 20px;
+}
+
+.tabs button {
+  width: 50%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #707f81;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tabs button.active-tab {
+  border-bottom-color: #3c5a5d;
+  color: #3c5a5d;
+  font-weight: bold;
+}
+.tabs button:not(.active-tab) {
+  background-color: #f6f6f6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-left: 250px;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #0c1415;
+  padding: 8px 10px;
+}
+
+th {
+  background: #3c5a5d;
+  color: #f6f6f6;
+  padding: 10px 12px;
+}
+
+td {
+  font-size: 14px;
+}
