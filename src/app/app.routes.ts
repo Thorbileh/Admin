@@ -10,6 +10,7 @@ import { OrdersComponent } from './pages/orders/orders.component';
 import { ComplaintsComponent } from './pages/complaints/complaints.component';
 
 
+
 export const routes: Routes = [
     {path:'signin-page', component:SigninComponent},
     {path: 'dashboard', component:DashboardComponent},
@@ -20,7 +21,7 @@ export const routes: Routes = [
     { path: 'earnings', component: TotalEarningsComponent },
     {path:'orders',component:OrdersComponent},
     {path:'complaints',component:ComplaintsComponent},
+    { path: 'earnings', component: TotalEarningsComponent },
     {path: '', redirectTo: 'signin-page', pathMatch: 'full'}, 
-    {path: '**', redirectTo:'signin-page', pathMatch:'full'}
-
+    {path: '**', redirectTo:'signin-page', pathMatch:'full'}  
 ];
