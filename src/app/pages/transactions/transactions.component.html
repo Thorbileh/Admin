@@ -5,7 +5,7 @@
   
   </div>
  
-  <app-side-bar></app-side-bar>
+<app-side-bar></app-side-bar>
 
   <!-- Tabs -->
   <div class="tabs">
@@ -41,7 +41,7 @@
           </div>
         </td>
         <td>{{ transaction.orderNumber }}</td>
-        <td>{{ transaction.amount | currency:'R':true:'1.2-2' }}</td>
+        <td>{{ transaction.amount | currency:'R':'symbol':'1.2-2' }}</td>
         <td>{{ transaction.status }}</td>
         <td>
           <button 
@@ -78,7 +78,7 @@
           </div>
         </td>
         <td>{{ transaction.orderNumber }}</td>
-        <td>{{ transaction.amount | currency:'R':true:'1.2-2' }}</td>
+        <td>{{ transaction.amount | currency:'R':'symbol':'1.2-2' }}</td>
         <td>{{ transaction.date }}</td>
         <td>{{ transaction.status }}</td>
       </tr>

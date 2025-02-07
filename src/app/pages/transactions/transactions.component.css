@@ -7,27 +7,20 @@ app-side-bar {
   top: 0;
 }
 .transactions-container {
-  width: 69%;
+  width: 65%;
   padding: 20px;
   font-family: Arial, sans-serif;
   margin-left: 170px;
 }
 
 /* Search & Filter */
-.search-filter {
- 
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  width: 69%;
-  margin-left: 250px;
-}
 
 .search-filter h2 {
   font-size: 20px;
   color: #0C1415;
   font-weight: bold;
   margin-top: 100px;
+  margin-left: 250px;
 }
 
 .search-filter-box {
@@ -81,7 +74,6 @@ table {
   border-collapse: collapse;
   background: white;
   margin-left: 250px;
-
 
 }
 
