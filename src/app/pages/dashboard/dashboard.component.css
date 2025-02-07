@@ -1,0 +1,45 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  align-items: flex-start;
+}
+
+.dashboard-content {
+  margin-top: 150px;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}
+
+.dashboard-card {
+  background-color: var(--green-buttons-links);
+  color: var(--white-background);
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(33.333% - 20px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.card-body {
+  font-size: 16px;
+}
