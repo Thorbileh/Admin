@@ -1,74 +1,89 @@
-<div class="container">
-  <div class="header">
-    <h1>Transactions</h1>
-    <div class="search-filter">
-      <input type="text" placeholder="Search" />
-      <button>Filter</button>
+<div class="transactions-container">
+  <!-- Search & Filter Section -->
+  <div class="search-filter">
+    <h2>Transactions</h2>
+    <div class="search-filter-box">
+      <input [(ngModel)]="searchQuery" placeholder="Search Transactions" />
+      <select>
+        <option value="">Filter by Status</option>
+        <option value="Delivered">Delivered</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Shipping">Shipping</option>
+      </select>
     </div>
   </div>
 
-  <div class="transaction-section">
-    <div class="tabs">
-      <button class="tab" [class.active]="activeTab === 'open'" (click)="activeTab = 'open'">
-        Open Transaction
-      </button>
-      <button class="tab" [class.active]="activeTab === 'closed'" (click)="activeTab = 'closed'">
-        Closed Transaction
-      </button>
-    </div>
-
-    <div *ngIf="activeTab === 'open'" class="transaction-type">
-      <h2>Open Transaction</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Runner</th>
-            <th>Order Number</th>
-            <th>Total Amount</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let transaction of openTransactions">
-            <td>{{ transaction.runner }}</td>
-            <td>{{ transaction.orderNumber }}</td>
-            <td>{{ transaction.totalAmount }}</td>
-            <td>{{ transaction.status }}</td>
-            <td><button>Pay</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div *ngIf="activeTab === 'closed'" class="transaction-type">
-      <h2>Closed Transaction</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Runner</th>
-            <th>Order Number</th>
-            <th>Total Amount</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let transaction of closedTransactions">
-            <td>{{ transaction.runner }}</td>
-            <td>{{ transaction.orderNumber }}</td>
-            <td>{{ transaction.totalAmount }}</td>
-            <td>{{ transaction.status }}</td>
-            <td><button>View</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <!-- Tabs -->
+  <div class="tabs">
+    <button 
+      (click)="switchTab('open')" 
+      [ngClass]="{ 'active-tab': selectedTab === 'open' }">
+      Open Transactions
+    </button>
+    <button 
+      (click)="switchTab('closed')" 
+      [ngClass]="{ 'active-tab': selectedTab === 'closed' }">
+      Closed Transactions
+    </button>
   </div>
 
-  <div class="pagination">
-    <button>Previous</button>
-    <span>1</span>
-    <button>Next</button>
-  </div>
+  <!-- Open Transactions Table -->
+  <table *ngIf="selectedTab === 'open'">
+    <thead>
+      <tr>
+        <th>Runner</th>
+        <th>Order Number</th>
+        <th>Total Amount</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of openTransactions">
+        <td>
+          <div class="runner-info">
+            <img [src]="transaction.profile" alt="Runner" class="runner-img" />
+            {{ transaction.runner }}
+          </div>
+        </td>
+        <td>{{ transaction.orderNumber }}</td>
+        <td>{{ transaction.amount | currency:'R':true:'1.2-2' }}</td>
+        <td>{{ transaction.status }}</td>
+        <td>
+          <button 
+            [ngClass]="{ 'pay-btn-active': transaction.status === 'Delivered', 'pay-btn-disabled': transaction.status !== 'Delivered' }">
+            Pay
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Closed Transactions Table -->
+  <table *ngIf="selectedTab === 'closed'">
+    <thead>
+      <tr>
+        <th>Runner</th>
+        <th>Order Number</th>
+        <th>Total Amount</th>
+        <th>Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of closedTransactions">
+        <td>
+          <div class="runner-info">
+            <img [src]="transaction.profile" alt="Runner" class="runner-img" />
+            {{ transaction.runner }}
+          </div>
+        </td>
+        <td>{{ transaction.orderNumber }}</td>
+        <td>{{ transaction.amount | currency:'R':true:'1.2-2' }}</td>
+        <td>{{ transaction.date }}</td>
+        <td>{{ transaction.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+ 
 </div>

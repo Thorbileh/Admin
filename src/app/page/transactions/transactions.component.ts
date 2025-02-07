@@ -1,40 +1,31 @@
-import { CommonModule, } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; 
 
 @Component({
   selector: 'app-transactions',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './transactions.component.html',
-  styleUrl: './transactions.component.css'
+  styleUrls: ['./transactions.component.css']
 })
 export class TransactionsComponent {
-  activeTab: string = 'open';
-  searchQuery: string = '';
-  currentPage: number = 1;
+  selectedTab: string = 'open'; 
+  searchQuery: string = ''; 
 
   openTransactions = [
-    { runner: 'John Doe', orderNumber: 'ASF8IH8UOLKV', totalAmount: 'R 900.00', date: '08 Jan 2025', status: 'Paid' },
-    // Add more open transactions as needed
+    { runner: 'John Doe', orderNumber: 'ASF6IHBJOLKV', amount: 900, status: 'Delivered' ,profile:'profile-images/profile.jpg' },
+    { runner: 'John Doe', orderNumber: 'ASF6IH45JOLKV', amount: 379, status: 'Delivered' ,profile:'profile-images/profile.jpg' },
+    { runner: 'Sihle Ntshali', orderNumber: 'ASF6IH45JOLKV', amount: 200, status: 'In Progress' ,profile:'profile-images/profile1.avif' },
+    { runner: 'Thando Lukhele', orderNumber: 'ASF6IH45JOLKV', amount: 379, status: 'Shipping'  ,profile:'profile-images/profile2.jpeg'}
   ];
 
   closedTransactions = [
-    { runner: 'John Doe', orderNumber: 'ASF8IH4SJOLKV', totalAmount: 'R 379.00', date: '18 Dec 2024', status: 'Paid' },
-    // Add more closed transactions as needed
+    { runner: 'Jane Doe', orderNumber: 'ASF6IH45JOLKV', amount: 499, date: '31 Dec 2024', status: 'Completed',profile:'profile-images/profile3.jpeg' },
+    { runner: 'John Doe', orderNumber: 'ASF6IH67JOLKV', amount: 49, date: '31 Dec 2024', status: 'Completed'  ,profile:'profile-images/profile.jpg'}
   ];
 
-  filterTransactions() {
-    // Implement filtering logic based on searchQuery
-  }
-
-  previousPage() {
-    if (this.currentPage > 1) {
-      this.currentPage--;
-    }
-  }
-
-  nextPage() {
-    this.currentPage++;
+  switchTab(tab: string) {
+    this.selectedTab = tab;
   }
 }

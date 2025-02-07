@@ -1,101 +1,123 @@
-.container {
+/* General Styling */
+.transactions-container {
+  width: 100%;
   padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.header {
+/* Search & Filter */
+.search-filter {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.header h1 {
-  color: #3C5A5D;
+.search-filter h2 {
+  font-size: 24px;
+  color: #0C1415;
+  font-weight: bold;
 }
 
-.search-filter {
+.search-filter-box {
   display: flex;
-  align-items: center;
+  gap: 10px;
 }
 
-.search-filter input {
-  padding: 5px;
-  margin-right: 10px;
+.search-filter-box input, 
+.search-filter-box select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.search-filter button {
-  padding: 5px 10px;
-  background-color: #3C5A5D;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
+/* Tabs */
 .tabs {
   display: flex;
+  width: 100%;
   margin-bottom: 20px;
 }
 
 .tabs button {
-  padding: 10px 20px;
-  background-color: #3C5A5D;
-  color: white;
+  width: 50%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 18px; 
+  font-weight: bold;
+  background: none;
   border: none;
+  color: #707F81;
   cursor: pointer;
-  margin-right: 10px;
-  border-radius: 4px 4px 0 0;
+  border-bottom: 3px solid transparent;
 }
 
-.tabs button.active {
-  background-color: #0C1415;
+.tabs button.active-tab {
+  border-bottom-color: #3C5A5D;
+  color: #3C5A5D;
+  font-weight: bold;
 }
 
-.transaction-section {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.tabs button:not(.active-tab) {
+  background-color: #f6f6f6;
 }
 
+/* Table Styling */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
-}
+  background: white;
 
-table, th, td {
-  border: 1px solid #ddd;
 }
 
 th, td {
-  padding: 10px;
   text-align: left;
-}
-
-th {
-  background-color: #3C5A5D;
-  color: white;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.pagination button {
-  padding: 5px 10px;
-  background-color: #3C5A5D;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin: 0 5px;
-}
-
-.pagination span {
-  margin: 0 5px;
-}
-
-
+  border-bottom: 1px solid #ddd;
+  color: #0C1415;
+  padding: 8px 10px;
   
+}
+td {
+  font-size: small;
+}
+
+/* Table Header Styling */
+th {
+  background: #3C5A5D;
+  color: #f6f6f6;
+  padding: 10px 12px; 
+}
+
+/* Runner Info */
+.runner-info {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.runner-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #ddd;
+}
+
+/* Pay Button Styling */
+.pay-btn-active {
+  background: #3C5A5D;
+  color: #f6f6f6;
+ width: 50%;
+  border: none;
+  border-radius: 6px; 
+  cursor: pointer;
+}
+
+.pay-btn-disabled {
+  background: #f6f6f6;
+  color: #3C5A5D;
+  width: 50%;
+  border: none;
+  border-radius: 6px; 
+  cursor: not-allowed;
+}
