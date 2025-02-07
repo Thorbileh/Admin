@@ -18,7 +18,6 @@ export const routes: Routes = [
     {path:'pay-runner',component:PayRunnerComponent},
     { path: 'earnings', component: TotalEarningsComponent },
     {path:'orders',component:OrdersComponent},
-    { path: 'earnings', component: TotalEarningsComponent },
     {path: '', redirectTo: 'signin-page', pathMatch: 'full'}, 
     {path: '**', redirectTo:'signin-page', pathMatch:'full'}  
 ];
