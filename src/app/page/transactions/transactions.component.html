@@ -2,29 +2,16 @@
   <!-- Search & Filter Section -->
   <div class="search-filter">
     <h2>Transactions</h2>
-    <!-- <div class="search-filter-box">
-      <input [(ngModel)]="searchQuery" placeholder="Search Transactions" />
-      <select>
-        <option value="">Filter by Status</option>
-        <option value="Delivered">Delivered</option>
-        <option value="In Progress">In Progress</option>
-        <option value="Shipping">Shipping</option>
-      </select>
-    </div> -->
   </div>
- 
+
   <app-side-bar></app-side-bar>
 
   <!-- Tabs -->
   <div class="tabs">
-    <button 
-      (click)="switchTab('open')" 
-      [ngClass]="{ 'active-tab': selectedTab === 'open' }">
+    <button (click)="switchTab('open')" [ngClass]="{ 'active-tab': selectedTab === 'open' }">
       Open Transactions
     </button>
-    <button 
-      (click)="switchTab('closed')" 
-      [ngClass]="{ 'active-tab': selectedTab === 'closed' }">
+    <button (click)="switchTab('closed')" [ngClass]="{ 'active-tab': selectedTab === 'closed' }">
       Closed Transactions
     </button>
   </div>
@@ -52,7 +39,7 @@
         <td>{{ transaction.amount | currency:'R':true:'1.2-2' }}</td>
         <td>{{ transaction.status }}</td>
         <td>
-          <button 
+          <button
             [ngClass]="{ 'pay-btn-active': transaction.status === 'Delivered', 'pay-btn-disabled': transaction.status !== 'Delivered' }">
             Pay
           </button>
@@ -87,5 +74,5 @@
       </tr>
     </tbody>
   </table>
- 
+
 </div>
