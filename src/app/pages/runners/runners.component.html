@@ -42,7 +42,7 @@
           <td>{{ transaction.date }}</td>
           <td>{{ transaction.status }}</td>
           <td>
-              <button class="view-btn">View</button>
+              <button class="view-btn" routerLink="/view-runner">View</button>
           </td>
         </tr>
       </tbody>
@@ -70,7 +70,7 @@
           <td>{{ transaction.status }}</td>
           <td>
             <div class="button-group">
-              <button class="view-btn">View</button>
+              <button class="view-btn" routerLink="/view-runner">View</button>
               <button class="deactivate-btn">Deactivate</button>
             </div>
           </td>

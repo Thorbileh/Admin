@@ -64,9 +64,7 @@ app-side-bar {
     font-weight: bold;
   }
   
-  .tabs button:not(.active-tab) {
-    background-color: #f6f6f6;
-  }
+ 
   
   /* Table Styling */
   table {
@@ -128,7 +126,7 @@ app-side-bar {
   }
   
    .deactivate-btn{
-    background: rgba(112, 127, 129, 0.50);
+    background: rgba(112, 127, 129, 0.15);
     color: #3C5A5D;
     width: 40%;
     border: none;
