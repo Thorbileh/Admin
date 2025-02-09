@@ -1,0 +1,108 @@
+app-side-bar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.details-container {
+  width: 65%;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-left: 170px;
+  margin-top: 70px;
+}
+
+.search-filter h2 {
+  font-size: 20px;
+  color: #0c1415;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-left: 250px;
+}
+
+.details {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-left: 250px;
+}
+.header-text {
+  color: #3c5a5d;
+}
+
+.description-box {
+  background-color: #f6f6f6;
+  padding: 10px; 
+  border-radius: 8px; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px; 
+  color: #0c1415; 
+  margin-top: 5px; 
+  max-width: 600px;
+  line-height: 1.5; 
+}
+
+.details p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.chat h3 {
+  text-align: center;
+  font-weight: bold;
+}
+.chat {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-left: 250px;
+}
+/* not to be touhced for now*/
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.chat {
+    margin-top: 20px;
+  }
+  
+  .chat h3 {
+    font-size: 18px;
+    color: #0c1415;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .message-box {
+    background-color: #f6f6f6; 
+    padding: 10px 15px;
+    border-radius: 8px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; 
+    max-width: 600px;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #0c1415; 
+  }
+  
+  .message-box strong {
+    font-size: 14px;
+    color: #3c5a5d; 
+    margin-right: 5px;
+  }
+  
+  .message-box .time {
+    font-size: 12px;
+    color: #707f81; 
+  }
+  
+  .message-box p {
+    margin: 5px 0 0; 
+  }
+  

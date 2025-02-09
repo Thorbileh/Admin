@@ -1,0 +1,37 @@
+<div class="details-container">
+  <div class="search-filter">
+    <h2>Complaint Details</h2>
+  </div>
+  <app-side-bar></app-side-bar>
+  <div class="details">
+    <p>
+      <strong class="header-text">Order Number:</strong>
+      {{ complaintDetails.orderNumber }}
+    </p>
+    <p>
+      <strong class="header-text">Dispute Number:</strong>
+      {{ complaintDetails.disputeId }}
+    </p>
+    <p>
+      <strong class="header-text">Buyer Name:</strong>
+      {{ complaintDetails.buyerName }}
+    </p>
+    <p>
+      <strong class="header-text">Dispute Title:</strong>
+      {{ complaintDetails.disputeTitle }}
+    </p>
+    <p><strong class="header-text">Description:</strong></p>
+    <div class="description-box">
+      {{ complaintDetails.description }}
+    </div>
+  </div>
+
+  <div class="chat">
+    <h3>Response</h3>
+    <div *ngFor="let message of complaintDetails.messages" class="message-box">
+      <strong>{{ message.sender }}</strong>
+      <span class="time">{{ message.time }}</span>
+      <p>{{ message.message }}</p>
+    </div>
+  </div>
+</div>
