@@ -4,6 +4,8 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { PayRunnerComponent } from './pages/pay-runner/pay-runner.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { TotalEarningsComponent } from './pages/total-earnings/pages/total-earnings.component';
+import { ComplaintsComponent } from './pages/complaints/pages/complaints.component';
+import { DetailedComplaintComponent } from './pages/complaints/pages/detailed-complaint/detailed-complaint.component';
 
 
 export const routes: Routes = [
@@ -12,5 +14,7 @@ export const routes: Routes = [
     {path: '', redirectTo: 'signin-page', pathMatch: 'full'}, 
     {path:'transaction',component:TransactionsComponent},
     {path:'pay-runner',component:PayRunnerComponent},
-    { path: 'earnings', component: TotalEarningsComponent }
+    { path: 'earnings', component: TotalEarningsComponent },
+    {path: 'complaints', component: ComplaintsComponent},
+    { path: 'complaints/:id', component: DetailedComplaintComponent} 
 ];
