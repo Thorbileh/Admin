@@ -6,8 +6,11 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { RunnersComponent } from './pages/runners/runners.component';
 import { ViewRunnerComponent } from './pages/view-runner/view-runner.component';
 import { TotalEarningsComponent } from './pages/total-earnings/pages/total-earnings.component';
+import { ComplaintsComponent } from './pages/complaints/pages/complaints.component';
+import { DetailedComplaintComponent } from './pages/complaints/pages/detailed-complaint/detailed-complaint.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+
 
 
 export const routes: Routes = [
@@ -21,9 +24,12 @@ export const routes: Routes = [
             {path:'pay-runner',component:PayRunnerComponent},
             { path: 'earnings', component: TotalEarningsComponent },
             {path:'orders',component:OrdersComponent},
+            {path: 'complaints', component: ComplaintsComponent},
+            {path: 'complaints/:id', component: DetailedComplaintComponent} 
         ]
     },
 
     {path: '', redirectTo: 'signin-page', pathMatch: 'full'}, 
     {path: '**', redirectTo:'signin-page', pathMatch:'full'}  
+
 ];

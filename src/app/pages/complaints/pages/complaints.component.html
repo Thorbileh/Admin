@@ -1,0 +1,61 @@
+<div class="transactions-container">
+  <div class="search-filter">
+    <h2>Complaints</h2>
+  </div>
+
+  <app-side-bar></app-side-bar>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Dispute ID</th>
+        <th>Dispute</th>
+        <th>Order Number</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of paginatedData">
+        <td>{{ item.date }}</td>
+        <td>
+          <a href="" (click)="navigateToDetails(item.disputeId)">{{
+            item.disputeId
+          }}</a>
+        </td>
+        <td>{{ item.dispute }}</td>
+        <td>{{ item.orderNumber }}</td>
+        <td>{{ item.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination">
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">
+      Previous
+    </button>
+    <span
+      *ngFor="
+        let page of [].constructor(
+          Math.ceil(subscriptionsData.length / itemsPerPage)
+        );
+        let i = index
+      "
+    >
+      <button
+        [ngClass]="{ 'active-page': currentPage === i + 1 }"
+        (click)="goToPage(i + 1)"
+      >
+        {{ i + 1 }}
+      </button>
+    </span>
+    <button
+      (click)="goToPage(currentPage + 1)"
+      [disabled]="
+        currentPage === Math.ceil(subscriptionsData.length / itemsPerPage)
+      "
+    >
+      Next
+    </button>
+  </div>
+</div>
