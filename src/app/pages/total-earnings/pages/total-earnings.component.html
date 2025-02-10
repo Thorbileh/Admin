@@ -3,21 +3,12 @@
   <div class="search-filter">
     <h2>Total Earnings</h2>
   </div>
-
-  <app-side-bar></app-side-bar>
-
   <!-- Tabs -->
   <div class="tabs">
-    <button
-      (click)="switchTab('subscriptions')"
-      [ngClass]="{ 'active-tab': selectedTab === 'subscriptions' }"
-    >
+    <button (click)="switchTab('subscriptions')" [ngClass]="{ 'active-tab': selectedTab === 'subscriptions' }">
       Subscriptions
     </button>
-    <button
-      (click)="switchTab('serviceFee')"
-      [ngClass]="{ 'active-tab': selectedTab === 'serviceFee' }"
-    >
+    <button (click)="switchTab('serviceFee')" [ngClass]="{ 'active-tab': selectedTab === 'serviceFee' }">
       Service Fee
     </button>
   </div>
@@ -39,7 +30,9 @@
         <td>{{ sub.type }}</td>
         <td>
           <a href="#">{{ sub.proof }}</a>
-          <!--Hopefully we'll be able to access this data/file-->
+    
+            <!--Hopefully we'll be able to access this data/file-->
+
         </td>
         <td>{{ sub.amount | currency : "R" : "symbol" : "1.2-2" }}</td>
         <td>{{ sub.date }}</td>
@@ -72,10 +65,7 @@
       Previous
     </button>
     <span *ngFor="let page of [].constructor(totalPages()); let i = index">
-      <button
-        [ngClass]="{ 'active-page': currentPage === i + 1 }"
-        (click)="goToPage(i + 1)"
-      >
+      <button [ngClass]="{ 'active-page': currentPage === i + 1 }" (click)="goToPage(i + 1)">
         {{ i + 1 }}
       </button>
     </span>

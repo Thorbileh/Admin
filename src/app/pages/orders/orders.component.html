@@ -1,0 +1,33 @@
+<div class="orders-container">
+    <!-- Search & Filter Section -->
+    <div class="search-filter">
+        <h2>Orders History</h2>
+
+    </div>
+    <!-- Open Transactions Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Runner</th>
+                <th>Order Number</th>
+                <th>Total Amount</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders">
+                <td>
+                    <div class="runner-info">
+                        <img [src]="order.profile" alt="Runner" class="runner-img" />
+                        {{ order.runner }}
+                    </div>
+                </td>
+                <td>{{ order.orderNumber }}</td>
+                <td>{{ order.buyer }}</td>
+                <td>{{ order.date }}</td>
+                <td> {{order.status}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

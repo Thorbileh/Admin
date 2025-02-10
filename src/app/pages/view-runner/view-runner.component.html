@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-8 content-area">
+          <div class="profile-card">
+              <div class="profile-content">
+                  <div class="details">
+                      <p><strong class="holders-text">Full Name:</strong > <span class="holders">{{ user.fullName }}</span></p>
+                      <p><strong class="holders-text">Address:</strong > <span class="holders">{{ user.address }}</span></p>
+                      <p><strong class="holders-text">Email:</strong > <span class="holders">{{ user.email }}</span></p>
+                      <p><strong class="holders-text">Id No:</strong > <span class="holders">{{ user.idNumber }}</span></p>
+                      <p><strong class="holders-text">Id Copy:</strong > <span class="holders"><a href="">{{ user.idCopy }}</a></span></p>
+                      <p><strong class="holders-text">Image:</strong> <span class="holders"><a href="">{{ user.image }}</a></span></p>
+                      <p><strong class="holders-text">Date:</strong > <span class="holders">{{ user.date }}</span></p>
+                        <br>
+                     <p><strong class="holders-text">Subscription Type:</strong > <span class="holders">{{ user.subType  }}</span></p>
+                      <p><strong class="holders-text">Subscription Amount:</strong > <span class="holders">{{ user.subAmount | currency:'R':'symbol':'1.2-2' }}</span></p>
+                      <div class="button-group">
+                          <button class="btn btn-custom" routerLink="/runners">Accept</button>
+                          <button class="btn btn-secondary">Reject</button>
+                          <button class="btn btn-custom">deactivate</button>
+                      </div>
+                  </div>
+                  <img [src]="user.profile" alt="User Picture" class="profile-img" />
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  

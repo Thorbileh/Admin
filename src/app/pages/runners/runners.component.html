@@ -1,0 +1,82 @@
+<div class="transactions-container">
+    <!-- Search & Filter Section -->
+    <div class="search-filter">
+      <h2>Runner List</h2>
+    
+    </div>
+  
+    <!-- Tabs -->
+    <div class="tabs">
+      <button 
+        (click)="switchTab('open')" 
+        [ngClass]="{ 'active-tab': selectedTab === 'open' }">
+        Pending Runners
+      </button>
+      <button 
+        (click)="switchTab('closed')" 
+        [ngClass]="{ 'active-tab': selectedTab === 'closed' }">
+        Approved Runners
+      </button>
+    </div>
+  
+    <!-- Pending Runners Table -->
+    <table *ngIf="selectedTab === 'open'">
+      <thead>
+        <tr>
+          <th>Runner</th>
+          <th>Date Applied</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of openTransactions">
+          <td>
+            <div class="runner-info">
+              <img [src]="transaction.profile" alt="Runner" class="runner-img" />
+              {{ transaction.runner }}
+            </div>
+          </td>
+          <td>{{ transaction.date }}</td>
+          <td>{{ transaction.status }}</td>
+          <td>
+              <button class="view-btn" routerLink="/view-runner">View</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Approved Runner Table -->
+    <table *ngIf="selectedTab === 'closed'">
+      <thead>
+        <tr>
+          <th>Runner</th>
+          <th>Date Accepted</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of closedTransactions">
+          <td>
+            <div class="runner-info">
+              <img [src]="transaction.profile" alt="Runner" class="runner-img" />
+              {{ transaction.runner }}
+            </div>
+          </td>
+          <td>{{ transaction.date }}</td>
+          <td>{{ transaction.status }}</td>
+          <td>
+            <div class="button-group">
+              <button class="view-btn" routerLink="/view-runner">View</button>
+              <button class="deactivate-btn">Deactivate</button>
+            </div>
+          </td>
+          
+         
+        </tr>
+      </tbody>
+    </table>
+   
+  </div>
+  

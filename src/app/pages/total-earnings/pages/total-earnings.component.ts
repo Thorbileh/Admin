@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SideBarComponent } from '../../../components/side-bar/side-bar.component';
 import { TotalEarningsService } from '../services/total-earnings.service';
 
 @Component({
   selector: 'earnings',
   standalone: true,
-  imports: [CommonModule, SideBarComponent],
+  imports: [CommonModule, ],
   templateUrl: './total-earnings.component.html',
   styleUrls: ['./total-earnings.component.css'],
 })

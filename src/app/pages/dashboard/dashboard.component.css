@@ -2,15 +2,18 @@
   display: flex;
   height: 100vh;
   align-items: flex-start;
+  width: 65%;
+  margin-left: 430px;
 }
 
 .dashboard-content {
-  margin-top: 150px;
+  margin-top: 80px;
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   padding: 20px;
+
 }
 
 .dashboard-card {
@@ -21,6 +24,10 @@
   width: calc(33.333% - 20px);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+.dashboard-card:hover {
+  background-color: var(--secondary-background);
+  width: calc(33.333% - 22px);
 }
 
 .card-header {

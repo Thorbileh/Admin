@@ -4,7 +4,7 @@ import { SideBarComponent } from "../../components/side-bar/side-bar.component";
 @Component({
   selector: 'app-pay-runner',
   standalone: true,
-  imports: [SideBarComponent],
+  imports: [],
   templateUrl: './pay-runner.component.html',
   styleUrl: './pay-runner.component.css'
 })
