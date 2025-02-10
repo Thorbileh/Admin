@@ -40,7 +40,7 @@
           <button [ngClass]="{
             'pay-btn-active': transaction.status === 'Delivered',
             'pay-btn-disabled': transaction.status !== 'Delivered'
-          }" [routerLink]="transaction.status === 'Delivered' ? '/pay-runner' : null"
+          }" [routerLink]="transaction.status === 'Delivered' ? '/home/pay-runner' : null"
             [attr.disabled]="transaction.status !== 'Delivered' ? true : null">
             Pay
           </button>

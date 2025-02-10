@@ -19,7 +19,7 @@ export const routes: Routes = [
             {path:'view-runner',component:ViewRunnerComponent},
             {path:'runners',component:RunnersComponent},
             {path:'pay-runner',component:PayRunnerComponent},
-            { path: 'earnings', component: TotalEarningsComponent },
+            {path: 'earnings', component: TotalEarningsComponent },
             {path:'orders',component:OrdersComponent},
         ]
     },

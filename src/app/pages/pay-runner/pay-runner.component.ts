@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { SideBarComponent } from "../../components/side-bar/side-bar.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pay-runner',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './pay-runner.component.html',
   styleUrl: './pay-runner.component.css'
 })
